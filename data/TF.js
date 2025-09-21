@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require("path");
 const N = 3023;
 // const W = 37641;
 let tf = new Array(N);
@@ -7,7 +8,7 @@ for (let i = 0; i < N; i++) {
   tf[i] = new Array(0);
 }
 
-const TF = fs.readFileSync("TF.txt").toString();
+const TF = fs.readFileSync(path.join(__dirname, "TF.txt")).toString();
 
 const temp = TF.split("\n");
 for (let k = 0; k < temp.length; k++) {
